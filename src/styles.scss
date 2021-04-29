@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; background-color: #0B0B13; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+
+$mat-primary:  (
+    50 : #e1e1e2,
+    100 : #b4b4b6,
+    200 : #838385,
+    300 : #515154,
+    400 : #2b2b2f,
+    500 : #06060a,
+    600 : #050509,
+    700 : #040407,
+    800 : #030305,
+    900 : #020203,
+    A100 : #a6a6a6,
+    A200 : #8c8c8c,
+    A400 : #737373,
+    A700 : #666666,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-secondary: (
+    50: #FCE9EC ,
+    100: #F8C7CF ,
+    200: #F4A2B0 ,
+    300: #F07D90 ,
+    400: #EC6178 ,
+    500: #E94560 ,
+    600: #E63E58 ,
+    700: #E3364E ,
+    800: #DF2E44 ,
+    900: #D91F33 ,
+    A100: #FFFFFF ,
+    A200: #FFDDE0 ,
+    A400: #FFAAB2 ,
+    A700: #FF909B ,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: white,
+    )
+);
+
+$my-app-primary: mat-palette($mat-primary);
+$my-app-accent: mat-palette($mat-secondary);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent);
+
+@include angular-material-theme($my-app-theme);

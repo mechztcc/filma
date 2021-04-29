@@ -1,0 +1,51 @@
+
+
+mat-toolbar {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        width: 90%;
+        margin: 0 auto;
+
+        .search {
+            position: relative;
+            
+
+
+            input {
+                
+                width: 100%;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                padding: 0 5px;
+            }
+
+            mat-icon {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                
+            }
+        }
+
+
+        .nav {
+            display: flex;
+            align-items: center;
+            
+            a {
+                text-decoration: none;
+                color: #FFF;
+                padding: 10px;
+            }
+
+            button {
+                height: 50%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
